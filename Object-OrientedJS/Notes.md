@@ -384,4 +384,4 @@
             - undefined
             - 0
             - NaN
-            - true
+            - false
