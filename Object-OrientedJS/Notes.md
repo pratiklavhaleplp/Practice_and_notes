@@ -385,3 +385,68 @@
             - 0
             - NaN
             - false
+<br>
+<br>
+<br>
+
+- **Non Primitive Data Type in Javascript is Array** 
+    - Array is a list consisting of multiple values and can be defined and accessed by single variable.
+    - If you want to store 100 values of similar types(numbers || strings || boolean || objects) then if we can use **Array** raher then declaring 100 varibales.
+    ```
+    var teting = [10, 20, 30, 40, 50]; defining and assigning five values to testing variable.
+    console.log(testing[4]); 50
+    While logging console testing[4] we have got 50, but if we try to count 50 is the 5th variable. The reason is, in array the 1st element is which is 10 is at index position 0. 
+    
+    In array data type the starting of the first element starts from 0 and so on.
+
+    Above example:
+        10 - indexed at 0th position. console.log(testing[0]);  // 10
+        20 - indexed at 1st position. console.log(testing[0]);  // 20
+        30 - indexed at 2nd position. console.log(testing[0]);  // 30
+        40 - indexed at 3rd position. console.log(testing[0]);  // 40
+        50 - indexed at 4th position. console.log(testing[0]);  // 50
+    ```
+    - In **Array** data type we are accessing values of array with the help of [index] square braces. 
+    - **Adding Element** in Array.
+        ```
+        var testing = [10, 20, 30];
+        testing.push(40); push is the method to add element into the testing array.
+        console.log(testing); // [10, 20, 30, 40] 
+        40 has been pushed/added to the array named testing. 
+        ```
+    - **Deleting Element** in Array
+        ```
+        var testing = [10, 20, 30, 40];
+        delete testing[3];
+        console.log(testing); // [10, 20, 30, empty]
+
+        After deleting we are getting empty in the 3rd index this shown that with the help of delete we can remove the element but the space is still there in the array.
+
+        console.log(testing.length); 4
+            - 4 shows that the length of testing array is 4 
+        ```
+    - array.**length** is the property through which you would be able to get the length of the array.
+        ```
+        var testing = [10, 20, 30, 40, 50];
+        console.log(testing.length); 4
+        ```
+    - Array of **Arrays** you can store multiple arrays inside one array.
+        ```
+        var diet = [[oats, omlet, bread], [apple, bannana, orange], [chiken, eggs, milk], [dates, almonds]];
+            - In above diet array we have four arrays
+                - [oats, omlet, bread] 
+                    -indexed at 0th position
+                - [apple, bannana, orange] 
+                    -indexed at 1st position
+                - [chiken, eggs, milk] 
+                    -indexed at 2nd position
+                - [dates, almonds] 
+                    -indexed at 3rd position
+        
+        console.log(diet[0]); [oats, omlet, bread] 
+        console.log(diet[1]); [apple, bannana, orange] 
+        console.log(diet[2]); [chiken, eggs, milk] 
+        console.log(diet[3]); [dates, almonds]
+        ```
+    
+     
