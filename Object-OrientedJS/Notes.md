@@ -448,8 +448,4 @@
         console.log(diet[2]); [chiken, eggs, milk] 
         console.log(diet[3]); [dates, almonds]
         ```
-    
-<div>
-    <h1 style="color:green;text-align:center;">pratik testing</h1>
-</div>
      
