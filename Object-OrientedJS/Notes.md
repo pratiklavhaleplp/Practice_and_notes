@@ -401,10 +401,10 @@
 
     Above example:
         10 - indexed at 0th position. console.log(testing[0]);  // 10
-        20 - indexed at 1st position. console.log(testing[0]);  // 20
-        30 - indexed at 2nd position. console.log(testing[0]);  // 30
-        40 - indexed at 3rd position. console.log(testing[0]);  // 40
-        50 - indexed at 4th position. console.log(testing[0]);  // 50
+        20 - indexed at 1st position. console.log(testing[1]);  // 20
+        30 - indexed at 2nd position. console.log(testing[2]);  // 30
+        40 - indexed at 3rd position. console.log(testing[3]);  // 40
+        50 - indexed at 4th position. console.log(testing[4]);  // 50
     ```
     - In **Array** data type we are accessing values of array with the help of [index] square braces. 
     - **Adding Element** in Array.
