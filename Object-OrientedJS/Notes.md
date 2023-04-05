@@ -449,7 +449,7 @@
         console.log(diet[3]); [dates, almonds]
         ```
     
-<div style="background-color: aquamarine">
-    <h1 style="background-color: aquamarine">pratik testing</h1>
+<div>
+    <h1 style="color:green;text-align:center;">pratik testing</h1>
 </div>
      
