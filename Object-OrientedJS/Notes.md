@@ -448,4 +448,136 @@
         console.log(diet[2]); [chiken, eggs, milk] 
         console.log(diet[3]); [dates, almonds]
         ```
-     
+- **Conditions And Loops**
+    - We can control the flow of exection of our code with the help of conditions(**if/ else...**).
+    - **Code Block** consists of zero or more expressions enclosed in curly brackets.
+        ```
+        {
+            var a = 1;
+            var b = 2;
+        }
+        Expressions between { } called as a code block
+
+        you can also nest code blocks inside one code block.
+        {
+            var a = 1;
+            var b = 2;
+            var c, d;
+            {
+                c = a + b;
+                {
+                    d = a - b;
+                }
+            }
+        }
+        ```
+    - The **if** condition.
+        ```
+        var str = '', test = 3
+        if(test > 2){
+            str = 'test is greater than 2';
+        }
+            - if has three parts 
+                - if statement
+                - condition
+                - block of code that is wrapped in {} which will get executed when condition get satisfied.
+        ```
+        - **Condition**
+            - The condition will always return boolean value eiter it will be true or false.
+            - All of the values including null, undefined, 0, string, ... which can be converted into boolean result could be used in the **condition**.
+    - The **if else** condition.
+        ```
+        var str = '', test = 3
+        if(test > 2){
+            str = 'test is greater than 2';
+        }else{
+            str = 'test is less than 2';
+        }
+        If we assign test = 1. Then else block will get executed.
+        ```
+    - The **if elseif else** condition.
+        ```
+        var str = '', test = 'pratik'
+        if(test > 2){
+            str = 'test is greater than 2';
+        }else if(test < 2){
+            str = 'test is less than 2';
+        }else if (typeof test === 'string'){
+            str = 'test string';
+        }else{
+            str = 'nothing to tell';
+        }
+        Above example is called as if-else ladder. 
+        ```
+    - **Nested** if else conditions.
+        ```
+        if (a === 1) {
+            if (b === 2) {
+            result = 'a is 1 and b is 2';
+            } else {
+            result = 'a is 1 but b is definitely not 2';
+            }
+        } else {
+            result = 'a is not 1, no idea about b';
+        }
+        ```
+    - **Ternary operator** for if else conditions.
+        ```
+        var a = 10;
+        a > 10 ? a = 'ten' : a = 'not ten';
+        console.log('value of a is : ', a);
+
+        value of a is : not ten
+
+        var a = 'pratik';
+        a === 10 ? a = 'ten' : 
+        (   typeof a === 'string' ? console.log('a is a string') 
+            : console.log('not a string not a ten')
+        );
+        output : a is a string
+
+
+        var a = null;
+        a === 10 ? a = 'ten' : 
+        (   typeof a === 'string' ? console.log('a is a string') 
+            : console.log('not a string not a ten')
+        );
+        output: not a string not a ten
+
+
+        var a = 10;
+        a === 10 ? a = 'ten' : 
+        (   typeof a === 'string' ? console.log('a is a string') 
+            : console.log('not a string not a ten')
+        );
+        output: ten
+        ```
+    - **Switch Statement**
+        ```
+        var a = 2;
+        switch(a){
+            case 1 : 
+                console.log('one');
+                console.log(1);
+            break;
+            case 2 : 
+                console.log('two');
+                console.log(2);
+            break;
+            case 3 : 
+                console.log('three');
+                console.log(3);
+            break;
+            case 4 : 
+                console.log('four');
+                console.log(4);
+            break;   
+        }
+        output : three
+                 3
+            
+            - We do not need to explicitly specify block in the case as you have seen that we are using multiple lines of code.
+            - Break is important else next case gets executed and will keep on executing till break is written.
+            - You can also have nested switch case blocks in one case.
+        ```
+
