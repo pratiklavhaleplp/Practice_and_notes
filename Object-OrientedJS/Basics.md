@@ -576,8 +576,58 @@
         output : three
                  3
             
-            - We do not need to explicitly specify block in the case as you have seen that we are using multiple lines of code.
+            - We do not need to explicitly specify block in the case as we have seen that we are using multiple lines of code.
             - Break is important else next case gets executed and will keep on executing till break is written.
-            - You can also have nested switch case blocks in one case.
+            - we can also have nested switch case blocks in one case.
         ```
+
+    - **Loops -** If we want to perform certain operations repeatedly then we can use **loops**. We have four basic types of loops in javascript. while loop, do-while, for loop, for-in loop.
+        - while loop
+        ```
+        let i = 0;
+        while(i < 10){ 
+            console.log(console.log(i)); // This line gets executed always if i is less than 10.
+            i+= 1;// Note-> Here += is the operator not + = check the space.
+        }
+        ```
+
+        - do-while
+        ```
+        let i = 0;
+        do{
+            console.log(i);
+            i+= 1;
+        }while(i < 10);
+        ```
+
+        - **for loop**
+        ```
+        // initialize  conditon done in one place in for loop
+        for(let i = 0; i< 10; i+=1){
+            console.log(i);
+        }
+        
+        - Note : condition includes when your loop will end and process to move from no where to the condition to complete the loop, else our loop will be never ending.
+        - In for loop i < 10 is the condition where the for loop will break, i+= 1 is the process through which we can reach to the condition to complete the loop.
+        ```
+
+        - **for in**
+        ```
+        let test = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+        for(let cur in test){
+            console.log(test[cur]);
+        }
+        
+        Output: 
+        a
+        b
+        c
+        d
+        e
+        f
+        g
+
+        - Note: This is the most easy way to use loops in your code we don't need to put any condtion and process to complete the loop. For in loop will take care of both condition and process of moving from no where to the end of loop.
+        ```
+
 

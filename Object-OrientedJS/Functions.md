@@ -1,0 +1,145 @@
+#### Introduction
+- Mastering functions is one of the most important you can do while learning new programming language.Javascript has many uses for funciton, **much more language flexibility and expressiveness comes from them only**. Programming languages other than javascript has **syntax for acheiving oop** and in Javascript we only use **Functions**.
+- This Section of notes will cover below topics.
+    - How we can define a function.
+    - Passing arguments to a function.
+    - Predefined functions that are available to you free in javascript.
+    - Scope of a variable in javascript.
+    - The concept that functions are just **Data** in Javascript.
+- Intresting applications of functions.
+    - Anonymous functions
+    - Callbacks
+    - Immediate (self-invoking) functions
+    - Inner functions (functions defined inside other functions)
+    - Functions that return functions
+    - Functions that redefine themselves
+    - Closures
+- What is a **function???**
+Function allows you to **group together number of statements,** **give a block name, reuse it** when required by addressing it with a **specific unique name.**
+    ```
+    function sum(a, b){
+        return a+b;
+    }
+
+    - function is a keyword through which we can define a function.
+    - sum is the name of function.
+    - { } statments inside curly braces are called as function body.
+    - return is key word which shows what is the out put of a function.
+    - Function always return a value if a function is not returning any value then implicitly it is undefined.
+    - Any Function in javascript will only return a single value. 
+    ```
+    
+    ```
+    function sum(a,b){
+        return a+b;
+    }
+    const result = sum(10, 12); // calling a function sum with 10, 12 as parameters.
+    console.log(result);
+    output : 22
+
+    const result2 = sum(10, 20, 30, 40);
+    console.log(result2);
+    output : 30
+    Note - The output is 30 other parameters 30, 40 got ignored in javascript.
+    ```
+- **Arguments** we have bydefault property in every function that is **arguments**
+    ```
+    function testing(a, b){
+    console.log(arguments);// logging arguments.
+    console.log(arguments.length); 
+    };
+
+    testing(3, 4);
+
+    output: 
+    {
+        "0": 3,
+        "1": 4
+    }
+    2 // specifies the length of the arguments object.
+    Note - As we have two arguments 3 and 4 in the default arguments object we'll get two values. arguments is the object having length property.
+         - If you check in the console window if you try to copy arrays, objects, null, undefined you will see option as copy object. So we can say arrays, objects, null, undefined are objects.
+         - typeof '' : string.
+         - typeof arguments : object //try this inside function.
+         - typeof Function : function.
+         - type of 1 : number
+    ```
+- **Default Parameters**
+    Function parameters are supplied while calling the function but if the parameters are ommited then there is a facility in javascript to send default parameters.
+    ```
+    function sum (a = 0, b = 0){
+        console.log(a + b);
+    }
+    sum();// 0
+    sum(2);// 2
+    sum(2,3);// 5
+    Note - If we provide no argument then then default values will get assigned.
+           If we provide one argument then first argument will get it's value identified and calculated
+           If we provide two argument then both the arguments will get it's value identified and calculated
+    ```
+
+    - Defult parameters have their **own scope**, this scope is **sandwiched** between the outer function scope and inner function scope.
+
+        ```
+        var test = 10;
+        function sum(firstParam = test, secondParam){
+            test = 34;
+            console.log(test); 
+            console.log('before manual assignment', firstParam);
+            firstParam = test;
+            console.log('after manual assignment', firstParam);
+        }
+        sum(); // Not passing anything means Javascript will be using default parameters.
+
+        Output:
+        34
+        before manual assignment 10
+        after manual assignment 34
+        ```
+        - In Above Example you can see test outside the function has more priority.
+        - Value in test has been changed with test = 34;
+        - Value in firstParam still the same which was in the outer scoped as the firstParam = test was given inside of the function defination.
+        - Value inside firstParam gets changed once it is assigned manually.
+            - The ideal scenario would be like we need anything bydefault assigned to the parameter of a function so that there would be no undefined values to be dealt with throughtout the execution of the function.
+- **Rest Parameters** **ES6** introduced this functionality. This **rest parameters** allows developers to send arbitrary number of parameters to a function in the form of array.
+    - **Rest Parameters** can only be the last one in the list of parameters to a function.
+    - There can be **only one** rest parameter.
+    - Putting **...** in the begning of last parameter to a function indicates that this is the rest parameter.
+    ```
+    function restParam(firstParam, ...restParam){
+        for(let current in restParam)
+            console.log(restParam[current]);
+    }
+    restParam('one', 'two', 'three', 'four', 'five');
+
+    Output: 
+        two
+        three
+        four
+        five
+
+    Note - We have only two parameters in the function firstParam and ...restParam
+           two, theree, four, five are accumulated in the restParam in the form of array.
+    ```
+- **Spread Operator** Looks exactly the same as **Rest Parameter** but works differently.
+    - **Rest Parameter** is a array which catches all the parameters in the function if the number excedes with the actual number of parameters in the function defination.
+    - **Spread Operator** will give you all the elements from the array.
+        ```
+        function sumOfAllArrayElements(a, b, c, d, e){
+            return a + b + c + d + e;
+        }
+        var arr = [1, 2, 3, 4, 5];
+        sumOfAllArrayElements(...arr);// spreading values of array and a, b, c, d, e is getting value each from the array object arr.
+        ```
+- **Predefined Function** there are number of functions provided by Javascript some of them are given below.
+    - parseInt()
+    - parseFloat()
+    - isNaN()
+    - isFinite()
+    - encodedURI()
+    - decodedURI()
+    - encodedURIComponent()
+    - decodedURIComponent()
+    - eval()
+
+
