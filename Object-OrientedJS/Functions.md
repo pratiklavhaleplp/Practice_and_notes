@@ -133,13 +133,75 @@ Function allows you to **group together number of statements,** **give a block n
         ```
 - **Predefined Function** there are number of functions provided by Javascript some of them are given below.
     - parseInt()
+        ```
+        console.log(parseInt('123')); // 123
+        console.log(parseInt('123.342')); // 123 in parseInt float number are converted into int numbers.
+        console.log(parseInt('ab123')); // NaN
+        console.log(parseInt('FF',10)); // NaN
+        console.log(parseInt('FF', 16)); // 255 HEXADECIMAL
+        console.log(parseInt('0377', 10)); // 377 DECIMAL
+        console.log(parseInt('0377', 8)); // 255 OCTAL
+
+        Note - parseInt will return NaN if it tries to parse characters.
+               
+               parseInt has optional second parameter called radix which specifies what type of number you want to parse, OCTAL, HEXADECIMAL, DECIMAL. 
+        ```
     - parseFloat()
-    - isNaN()
+        ```
+        console.log(parseFloat('123')); // 123
+        console.log(parseFloat('1.23')); // 1.23
+        console.log(parseFloat('1.23abc.00')); // 1.23
+        console.log(parseFloat('a.bc1.23')); // NaN
+        console.log(parseFloat('a123.34')); // NaN
+        console.log(parseFloat('12a3.34')); // 12
+        console.log(parseFloat('123e-2')); // 1.23
+        console.log(parseFloat('1e10')); // 10000000000
+        console.log(parseFloat('1e-10')); // 1e-10
+        console.log(parseFloat('1e-5')); // 0.00001
+            Note - from 1e-10 to 1e-6 you will be getting no floating points but from 1e-5 you will get the 
+            desired output this is exceptional case in parseFloat.
+        console.log(parseInt('1e10'));// 1
+        ```
+    - isNaN() will return you **true or false**
+        ```
+        console.log(isNaN(NaN)); // true
+        console.log(isNaN(123)); // false
+        console.log(isNaN(1.23)); // false
+        console.log(isNaN(parseInt('abc123'))); // true
+        console.log(isNaN('1.23')); // false
+        console.log(isNaN('a1.23')); // true
+        ```
     - isFinite()
-    - encodedURI()
-    - decodedURI()
-    - encodedURIComponent()
-    - decodedURIComponent()
-    - eval()
+        ```
+        console.log(isFinite(Infinity)); // false
+        console.log(isFinite(-Infinity)); // false
+        console.log(isFinite(12)); // true
+        console.log(isFinite(1e308)); // true
+        console.log(isFinite(1e309)); // false
+
+        Note - Notice last example biggest number in javascript is 1.7976931348623157e+308
+    - Encoding/Decoding URL or URI
+        - encodedURI()
+            ```
+            var url = 'http://www.packtpub.com/script.php?q=this and that';
+            encodeURI(url);//http://www.packtpub.com/script.php?q=this%20and%20that
+            This function will return you usable url/url
+            ```
+        - encodedURIComponent()
+            ```
+            var url = 'http://www.packtpub.com/script.php?q=this and that';
+            encodeURIComponent(url);//http%3A%2F%2Fwww.packtpub.com%2Fscript.php%3Fq%3Dthis%20and%20that
+            This function assumes that you are passing parts of url, such as query string and will encode all the applicable characters.
+            ```
+        - decodedURI() will work opposite to encodingURI()
+        - decodedURIComponent() will work opposite to encodedURIComponent()  
+    - eval() will take string as javascript code and gives you the output
+    ```
+    eval('function sum(a,b){return a+b}');
+    sum(3,4);
+    you will be getting error for using eval 
+    error : fused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src github.githubassets.com.
+    ```
+
 
 
