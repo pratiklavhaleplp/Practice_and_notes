@@ -13,4 +13,7 @@
         - In addition to **Replaced and Non Replaced** elements **CSS** used two other basic types of elements: **block-level** and **inline-level**. Basically there are two main display types in css **block** and **inline** refering to **block-level** and **inline-level** elemets types of **CSS**. There are multiple display types in **CSS** but these are two to which all refers.
             - **Block-Level** (*refering to display type block*).
             Block level element will **generate a BOX** fills the **parent area** and **creates break before and after itself**. Also block-level elements **can not have other elements** at it's sides both **before and after the BOX**.
-            <iframe src="./Basics.html" width="100%" height="500"></iframe>
+            ```
+            <h1>This is block</h1> <span>this is a inline element</span> <h1>This is block</h1>
+            ```
+            ![Example Image](./BlockVSInline.png "This is an example image")
