@@ -16,4 +16,4 @@
             ```
             <h1>This is block</h1> <span>this is a inline element</span> <h1>This is block</h1>
             ```
-            ![Example Image](./BlockVSInline.png "This is an example image")
+            ![Example Image](./output/BlockVSInline.png "This is an example image")
