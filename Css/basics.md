@@ -14,6 +14,8 @@
             - **Block-Level** (*refering to display type block*).
             Block level element will **generate a BOX** fills the **parent area** and **creates break before and after itself**. Also block-level elements **can not have other elements** at it's sides both **before and after the BOX**.
             ```
-            <h1>This is block</h1> <span>this is a inline element</span> <h1>This is block</h1>
-            ```
-            ![Example Image](./output/BlockVSInline.png "This is an example image")
+            <h1>This is block</h1> 
+            <span>this is a inline element</span> 
+            <h1>This is block</h1>
+            ``` 
+            <img src="./output/BlockVSInline.png" width="300" height="150"/>
