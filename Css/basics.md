@@ -19,4 +19,4 @@
             <span>this is a inline element</span> 
             <h1>This is block</h1>
             ``` 
-            <img src="./output/BlockVsInline.jpg" width="300" height="150"/>
+            <img src="./output/blockVsInline.jpg" width="300" height="150"/>
