@@ -19,4 +19,34 @@
             <span>this is a inline element</span> 
             <h1>This is block</h1>
             ``` 
-            <img src="./output/blockVsInline.jpg" width="300" height="150"/>
+            <img src="./output/blockVsInline.jpg" width="300" height="150"/><br>
+
+            - Mostly used values of **display** propery are,
+              - display: block
+              - display : inline
+              - display : list-item
+            - There are list of categories we have in display property.
+              - display-outside
+                - block | inline | run-in
+              - display-inside
+                - flow | flow-root | table | flex | grid | ruby
+              - display-listitem
+                - ```list-item && <display-outside>? && [ flow | flow-root ]?``` (Will discuss this in details later)
+              - display-internal
+                - table-row-group | table-header-group | table-footer-group | table-row |
+                table-cell | table-column-group | table-column | table-caption | ruby-base
+                | ruby-text | ruby-base-container | ruby-text-container
+              - display-box
+                - contents | none
+              - display-legacy
+                - inline-block | inline-list-item | inline-table | inline-flex | inline-grid
+        - **By Default the display property** of each and every elemet in HTML is **fixed implicitly,** and that can be one of the values defined above.
+        - **But if you are considering CSS** there is **no such restrictions** we can change display property of any html element by **specifying explicitly display property** of a HTML tag
+            ```
+            <h3 style="display: inline;">This is block element</h3> 
+            <span style="display: block;">This is a inline element</span> 
+            <span style="display: block;">this is a inline element</span>
+            <h3 style="display: inline;">This is block element</h3>
+            ```
+            <img src="./output/CssWayToDefineInlineAndBlock.jpg" width="300" height="150"/><br>
+            - **Note:** in above example **h3** tag has been specified to get **displayed in inline** and **span** has **created a break** **before** and **after** it's own content. As **break has been created by span before it's content** this is a inline element has been displayed on next line **explicitly**.
