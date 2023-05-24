@@ -1,21 +1,8 @@
-function iter(array){
-    let nextId = 0;
-    return{
-        next: function(){
-            if(nextId < array.length){
-                return {value : array[nextId++], done : false};
-            }else{
-                return {done : true}
-            }
-        }
-    }
-}
+const set = new Set();
+set.add('one');
+console.log(set.has('one')); 
+console.log(set.delete('one')); 
+console.log(set.has('one'));
 
-let it = iter(['one', 'two', 'three', 'four', 'five', 'six']);
-console.log(it.next());
-console.log(it.next());
-console.log(it.next());
-console.log(it.next());
-console.log(it.next());
-console.log(it.next());
-console.log(it.next());
+const set2 = new Set(['one', 'two', 'two', 'three']);
+console.log(set2);
