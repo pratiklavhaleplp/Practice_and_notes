@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+}
+
+.container{
+    border: 6px solid black;
+    display: flex;
+    height: 400px;
+    align-items: flex-end;
+}
+
+
+.flex-item {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+  flex-shrink: 0;
+}
+
+.item-1 {
+  background-color: cornflowerblue;
+  align-self: flex-start;
+}
+.item-2 {
+  background-color: rgb(107, 179, 179);
+  align-self: flex-end;
+}
+.item-3 {
+  background-color: blanchedalmond;
+  align-self: center;
+}
+.item-4 {
+  background-color: deeppink;
+}
+.item-5 {
+  background-color: rgb(176, 122, 122);
+}
+.item-6 {
+  background-color: rgb(12, 56, 92);
+}
+.item-7 {
+  background-color: rgb(207, 192, 32);
+}
+.item-8 {
+  background-color: rgb(157, 99, 99);
+}
+.item-9 {
+  background-color: rgb(164, 142, 142);
+}
+.item-10 {
+  background-color: rgb(64, 200, 202);
+}
