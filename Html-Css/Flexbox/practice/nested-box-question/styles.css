@@ -1,0 +1,36 @@
+.container-one{
+    display: flex;
+    height: 80vh;
+    background-color: antiquewhite;
+    width: 50vw;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+}
+.container-two{
+    display: flex;
+    height: 80%;
+    background-color:aqua;
+    width: 80%;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-three{
+    display: flex;
+    height: 80%;
+    background-color:blue;
+    width: 80%;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-four{
+    display: flex;
+    height: 80%;
+    background-color:burlywood;
+    width: 80%;
+    border: 2px solid black;
+}
