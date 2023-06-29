@@ -1,0 +1,1 @@
+let interval = setInterval(() => { console.log('tesintg') }, 1000);
